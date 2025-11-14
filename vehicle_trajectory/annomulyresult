@@ -1,0 +1,56 @@
+python3 annomulyDetection.py --prefix porto_result --outdir results_v2 --num-walks 10 --walk-length 20 --emb-dim 128 --emb-epochs 10 --if-contam 0.1 --plot
+/home/host/Desktop/DNR/annomulyDetection.py:43: UserWarning: scikit-learn or parts missing; will fallback to z-score and PCA-only.
+  warnings.warn("scikit-learn or parts missing; will fallback to z-score and PCA-only.")
+/usr/local/lib/python3.10/dist-packages/matplotlib/projections/__init__.py:63: UserWarning: Unable to import Axes3D. This may be due to multiple versions of Matplotlib being installed (e.g. as a system package and as a pip package). As a result, the 3D projection is not available.
+  warnings.warn("Unable to import Axes3D. This may be due to multiple versions of "
+[INFO] Reading CSVs (if present):
+   porto_result_grids.csv
+   porto_result_GT_edges.csv
+   porto_result_GT_nodes.csv
+   porto_result_R_history.csv
+   porto_result_selected_nodes.csv
+   porto_result_selected_summary.csv
+[INFO] Built GT with 2017 timesteps (times: [0, 1, 2, 3, 4] ... )
+[INFO] Generated 27700600 walks (num_walks=10, walk_length=20)
+[INFO] Training Word2Vec embeddings...
+[INFO] Saved embeddings -> results_v2/porto_result_embeddings.csv
+[INFO] Running anomaly detection (IsolationForest if available)...
+[INFO] Saved anomalies -> results_v2/porto_result_anomalies.csv
+/home/host/Desktop/DNR/annomulyDetection.py:216: UserWarning: Embedding plot failed: No module named 'sklearn'
+  warnings.warn(f"Embedding plot failed: {e}")
+[INFO] Saved embeddings 2D plot -> results_v2/porto_result_embeddings_2d.png
+/home/host/Desktop/DNR/annomulyDetection.py:318: UserWarning: Could not join anomalies and R_history: value_name (R_value) cannot match an element in the DataFrame columns.
+  warnings.warn(f"Could not join anomalies and R_history: {e}")
+
+
+porto_result_grids.csv
+   porto_result_GT_edges.csv
+   porto_result_GT_nodes.csv
+   porto_result_R_history.csv
+   porto_result_selected_nodes.csv
+   porto_result_selected_summary.csv
+[INFO] Built GT with 2017 timesteps (times: [0, 1, 2, 3, 4] ... )
+[INFO] Generated 27700600 walks (num_walks=10, walk_length=20)
+[INFO] Training Word2Vec embeddings...
+[INFO] Saved embeddings -> results_v2_v2/porto_result_embeddings.csv
+[INFO] Running anomaly detection (IsolationForest if available)...
+[INFO] Saved anomalies -> results_v2_v2/porto_result_anomalies.csv
+QStandardPaths: XDG_RUNTIME_DIR not set, defaulting to '/tmp/runtime-root'
+[INFO] Saved embeddings 2D plot -> results_v2_v2/porto_result_embeddings_2d.png
+/home/host/Desktop/DNR/annomulyDetection.py:318: UserWarning: Could not join anomalies and R_history: value_name (R_value) cannot match an element in the DataFrame columns.
+  warnings.warn(f"Could not join anomalies and R_history: {e}")
+[DONE] Outputs in results_v2_v2
+
+
+ TRIP_ID  cluster  dist_to_centroid  cluster_anomaly  physics_anomaly  is_anomaly
+369  1398354418620000657        2         44.689336             True            False        True
+429  1394719686620000243        2         44.538878             True            False        True
+547  1373163886620000675        2         44.480776             True            False        True
+575  1387832528620000020        2         44.425211             True            False        True
+241  1376711361620000424        2         44.408034             True            False        True
+400  1382037994620000333        2         44.406189             True            False        True
+361  1381672045620000207        2         44.344179             True            False        True
+792  1390468666620000184        2         44.313852             True            False        True
+552  1389182021620000465        2         38.601865             True            False        True
+565  1401521001620000525        2         38.599831             True            False        True
+
